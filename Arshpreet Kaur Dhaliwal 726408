@@ -1,0 +1,231 @@
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+// Arsh Dhaliwal studentid-C0726408
+MongoClient.connect(url,{ useUnifiedTopology: true } ,function(err,db){
+if(err)
+{
+throw err;
+return console.log('there is an err');
+
+}
+var myDB = db.db("CestarCollege");
+myDB.createCollection("CPCT" ,function(err,respond){
+if(err) throw err;
+
+console.log('collection created');
+db.close();
+});
+});
+
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+// Arsh Dhaliwal studentid-C0726408
+MongoClient.connect(url,{ useUnifiedTopology: true } ,function(err,db){
+if(err)
+{
+throw err;
+return console.log('there is an err');
+
+}
+var myDB = db.db("CestarCollege");
+var addDoc = [
+   { name: "Arsh" , lastname :" Dhaliwal" , studentId: "c0726408",  email: "arshdhaliwal998@gmail.com", address: "21 Tina crt"},
+   { name: "Rishi" , lastname :" Bhullar" , studentId: "c0741867",  email: "Rishibhullar@gmail.com", address: "Morningstar Drive"},
+   { name: "Harinder " , lastname :" Singh" , studentId: "c0726457", email: "0singhgill@gmail.com", address: "32 willow park ave"},
+{ name: "Jaspreet" , lastname :" kaur" , studentId: "c0741677" ,email: "kaurjaspreet@gmail.com", address: "Central st 954"},
+{ name: "Anmol" , lastname :" Dhillon" , studentId: "c0726606",  email: "Danmol@gmail.com", address: "144 Black forest dr"},
+{ name: "Jass" , lastname :" Gill" , studentId: "c070445537" , email: "jass998@gmail.com", address: "24 Tina crt"},
+{ name: "Peter" , lastname :" Betty" , studentId: "c0654343" , email: "Peterbetty@gmail.com", address: "Lowstreet 4"},
+{ name: "Ramandeep" , lastname :" kaur" , studentId: "c0733367",  email: "kaurraman@gmail.com", address: "36 mortonway"},
+{ name: "Avreet" , lastname :" kaur" , studentId: "c0724505",  email: "avreet@gmail.com", address: "13credit stone rd"},
+{ name: "Gurleen" , lastname :" Tiwana" , studentId: "c07234532",  email: "tiwana33@gmail.com", address: "33 north york"},
+{ name: "Jasmeen" , lastname :" kaur" , studentId: "c07115553",  email: "jaskaur@gmail.com", address: "164 elgin drive brampton"},
+{ name: "Harjaap" , lastname :" Brar" , studentId: "c0732123",  email: "brar12harjaap@gmail.com", address: "12 derry and dixie"},
+{ name: "Gurleen" , lastname :" Tiwana" , studentId: "c07234532",  email: "tiwana33@gmail.com", address: "33 north york"},
+{ name: "Sandeep" , lastname :" singh" , studentId: "c0720492",  email: "sandeepbrar@gmail.com", address: "34 ichigan ave"},
+{ name: "Navneet kaur" , lastname :" Bhangu" , studentId: "c0755667",  email: "bhnagunavnwwt@gmail.com", address: "25 scarbrough"},
+{ name: "Amandeep kaur" , lastname :" Brar" , studentId: "c0723344",  email: "kauramangmail.com", address: "154 morton way brampton"},
+{ name: "Arshpreet" , lastname :" kaur" , studentId: "c0766552",  email: "arshkaur@gmail.com", address: "9 bach blvd brampton"},
+{ name: "Ashveer" , lastname :" saini" , studentId: "c0733444",  email: "deepsingh@gmail.com", address: "23 michigan ave"},
+        { name: "Pradeep" , lastname :" singh" , studentId: "c0733444",  email: "sainiash@gmail.com", address: "Apple st 652 scarbrough"},
+   { name: "palvi" , lastname :" sharma" , studentId: "c078765",  email: "psharma@gmail.com", address: " 83 derry rd mississauga"},
+
+
+];
+myDB.collection("CPCT").insertMany(addDoc,function(err,respond){
+if(err) throw err;
+
+console.log('documents inserted');
+db.close();
+});
+});
+
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+// Arsh Dhaliwal studentid-C0726408
+MongoClient.connect(url,{ useUnifiedTopology: true } ,function(err,db){
+if(err)
+{
+throw err;
+return console.log('there is an err');
+
+}
+var myDB = db.db("CestarCollege");
+var myquery = {name:"Gurleen"};
+var newvalues = {$set:{name: "Grewal"} };
+
+myDB.collection("CPCT" ).updateOne(myquery,newvalues,function(err,respond){
+if(err) throw err;
+
+console.log('document updated');
+db.close();
+});
+});
+
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+// Arsh Dhaliwal studentid-C0726408
+MongoClient.connect(url,{ useUnifiedTopology: true } ,function(err,db){
+if(err)
+{
+throw err;
+return console.log('there is an err');
+
+}
+var myDB = db.db("CestarCollege");
+var myquery = {address:"23 michigan ave"};
+
+myDB.collection("CPCT" ).deleteOne(myquery,function(err,respond){
+if(err) throw err;
+
+console.log('document deleted');
+db.close();
+});
+});
+
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+// Arsh Dhaliwal studentid-C0726408
+MongoClient.connect(url,{ useUnifiedTopology: true } ,function(err,db){
+if(err)
+{
+throw err;
+return console.log('there is an err');
+
+}
+var myDB = db.db("CestarCollege");
+myDB.createCollection("Instructors_CPCT" ,function(err,respond){
+if(err) throw err;
+
+console.log('New collection created');
+db.close();
+});
+});
+
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+// Arsh Dhaliwal studentid-C0726408
+MongoClient.connect(url,{ useUnifiedTopology: true } ,function(err,db){
+if(err)
+{
+throw err;
+return console.log('there is an err');
+
+}
+var myDB = db.db("CestarCollege");
+var addDoc = [
+  { name: "Mehrnoush " , lastname :" Ashrafi" , Course: "Enterprise Technologies",  email: "mehrnoush.asrafi@gmail.com"},
+   { name: "Diana" , lastname :" M" , Course: "Co-Op Preparation",  email: "Dianam@gmail.com"},
+{ name: "simrandeep" , lastname :"Kaur" ,    Course: "Programming java",  email: "simrandeep@gmail.com"},
+{ name: "Javeria" ,lastname :" Aamir" , Course: "Web Technologies I",  email: "javeria.Aamir@gmail.com"},
+{ name: "Hesam" ,   lastname :" Akbari" , Course: "Networking Fundamentals",  email: "heasmAkbari@gmail.com"},
+{ name: "Rachida " ,  lastname:" Amjoun" , Course: "Database Design & SQL",  email: "Rachida.Amjoun@gmail.com"},
+{ name: "Peter" , lastname :"Sigurdson" , Course: "programming C# net",  email: "Peter.Sigurdson@gmail.com"},
+{ name: "George" , lastname :"K" , Course: "Web Security",  email: "george.k@gmail.com"},
+{ name: "Petty" , lastname :"Zakaria" , Course: "English",  email: "pettyzakaria@gmail.com"},
+{ name: "Ahmad " , lastname :"Alhamed" , Course: "Mobile Development",  email: "ahmad.alhamad@gmail.com"},
+{ name: "sisay" , lastname :"shega" , Course: "Communication",  email: "sisayshega@gmail.com"},
+{ name: "Javeria" , lastname :"Aamir" , Course: "Web Applications Using C# .NET ",  email: "javeria.Aamir@gmail.com"},
+{ name: "Hesam" , lastname :"Akbari" , Course: "Programming Java SE",  email: "HesamAkbari@gmail.com"},
+{ name: "Jignesh" , lastname :"updhay" , Course: "Project Management",  email: "jignesh.updhay@gmail.com"},
+{ name: "Peter" , lastname :"Sigurdson" , Course: "Programming Java EE",  email: "Peter.Sigurdson@gmail.com"},
+{ name: "Simrandeep " , lastname :"Kaur" , Course: "Database Programming",  email: "kaur.Simrandeep@gmail.com"}
+
+];
+myDB.collection("Instructors_CPCT").insertMany(addDoc,function(err,respond){
+if(err) throw err;
+
+console.log('documents inserted');
+db.close();
+});
+});
+
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+// Arsh Dhaliwal studentid-C0726408
+MongoClient.connect(url,{ useUnifiedTopology: true } ,function(err,db){
+if(err)
+{
+throw err;
+return console.log('there is an err');
+
+}
+var myDB = db.db("CestarCollege");
+myDB.createCollection("Programs" ,function(err,respond){
+if(err) throw err;
+
+console.log('New collection created');
+db.close();
+});
+});
+
+
+var MongoClient = require ('mongodb').MongoClient;
+var url = "mongodb://localhost:27017";
+
+// Arsh Dhaliwal studentid-C0726408
+MongoClient.connect(url,{ useUnifiedTopology: true } ,function(err,db){
+if(err)
+{
+throw err;
+return console.log('there is an err');
+
+}
+var myDB = db.db("CestarCollege");
+var addDoc = [
+  { Program: "Computer programming", Duration: "2 year"},
+    { Program: "Adult education", Duration: "3year"},
+{ Program: "Buisness accounting", Duration: "1 year"}, 
+{ Program: "Buisness", Duration: "2 year"},
+{ Program: "CSAT", Duration: "16 months"},
+{ Program: "Clent relations", Duration: "2 year"},
+    { Program: "Early childhood education", Duration: "14 months"},
+    { Program: "Food service work", Duration: "2 year"},
+    { Program: "Graphic Design software", Duration: "1 year"},
+    { Program: "Hair stylist", Duration: "16 months"},
+    { Program: "Home inspection", Duration: "20 months"},
+{ Program: "Medical Clerk", Duration: "2 year"},
+    { Program: "Microsoft office", Duration: "Two year"},
+{ Program: "Photography", Duration: "2 year"}, 
+{ Program: "Web design", Duration: "2 year"},
+{ Program: "Peramedic", Duration: "2 year"},
+{ Program: "Legal office Assistant", Duration: "2 year"},
+{ Program: "Hotel and resort management", Duration: "2 year"},
+{ Program: "Human Resources Management", Duration: "2 year"},
+   { Program: "Cyber security", Duration: "2 year"}
+
+];
+myDB.collection("Programs").insertMany(addDoc,function(err,respond){
+if(err) throw err;
+
+console.log('documents inserted');
+db.close();
+});
+});
